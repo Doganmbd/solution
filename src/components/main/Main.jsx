@@ -1,9 +1,15 @@
-import React from 'react'
+import { data } from "../../helpers/data.js";
+import Card from "./Card.jsx";
+import "./main.scss"
 
 const Main = () => {
   return (
-    <div>Main</div>
-  )
-}
+    <div className="mainContainer">
+      {data.map((item) => {
+        return <Card {...item} key={item.id} />;
+      })}
+    </div>
+  );
+};
 
-export default Main
+export default Main;

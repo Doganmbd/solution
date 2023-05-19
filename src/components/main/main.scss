@@ -1,0 +1,45 @@
+@import "../../scss/App.scss";
+
+.mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2rem;
+  gap: 2rem;
+  .cardContainer {
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+    background-color: $navbarBgColor;
+    position: relative;
+    overflow: hidden;
+    &:hover .parag {
+      transform: translateY(0);
+    }
+    .title {
+      font-size: 1.5rem;
+      padding: 1rem;
+      color: azure;
+    }
+  }
+  img {
+    height: 300px;
+    width: 500px;
+    padding: 1rem;
+    &:hover {
+      filter: grayscale(100);
+    }
+  }
+
+  .parag {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    padding: 1rem;
+    position: absolute;
+    color: azure;
+    z-index: 1;
+    transform: translateY(100%);
+    bottom: 0;
+    left: 0;
+    transition: transform 0.7s ease-in-out;
+  }
+}
